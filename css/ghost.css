@@ -1,0 +1,492 @@
+/*
+Ghost CSS
+
+ndak bisa basa engres | maap kalo ndak ada penjelasan.....
+*/
+body {
+    background-color: #bacbd2;
+    font-family: poppins;
+}
+
+.con {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.profile .uname {
+    margin: 30px 0 10px;
+    font-size: 32px;
+    color: #fff;
+    line-height: 32px;
+    font-weight: 400;
+    display: block;
+}
+.profile .dname {
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.5;
+    display: block;
+}
+.profile {
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #4098ab;
+    text-align: center;
+    
+    position: relative;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.profile .slide{
+    height: 52%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    background-color: #626262;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -khtml-border-radius: 4px 4px 0 0;
+}
+.profile .slide:before{
+    background: #4098ab;
+    left: -25%;
+    bottom: -63%;
+    width: 100%;
+    height: 70%;
+    content: '';
+    position: absolute;
+    transform: rotate(12deg);
+    -webkit-transform: rotate(12deg);
+}
+.profile .slide:after{
+    background: #4098ab;
+    left: auto;
+    right: -25%;
+    bottom: -63%;
+    width: 100%;
+    height: 70%;
+    content: '';
+    position: absolute;
+    transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+}
+.profile .avatar img{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.548);
+    border: 3px solid #fff;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -khtml-border-radius: 100%;
+}
+.profile .avatar{
+    position: relative;
+    display: inline-block;
+    width: 146px;
+}
+.menu {
+    color: white;
+    background-color: #42a8bf;
+    
+    text-align: center;
+}
+.list-group .active{
+    background-color: #4098ab;
+    border-color: #4098ab;
+}
+.contact {
+    color: white;
+    background-color: #42a8bf;
+    text-align: center;
+    height: 100%;
+}
+
+.content {
+    background-color: #fff;
+    overflow: auto;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 8;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: visibility 1s linear, opacity .5s linear;
+    -moz-transition: visibility 1s linear, opacity .5s linear;
+    -webkit-transition: visibility 1s linear, opacity .5s linear;
+    -o-transition: visibility 1s linear, opacity .5s linear;
+}
+
+.content.animated {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9;
+}
+.content.hidden {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+}
+.content.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+.centered-con {
+    margin: 8vh 6vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 84vh;
+    max-width: 1268px;
+    max-height: 674px;
+    position: relative;
+}
+
+.clearpad {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.ddd {
+    display: block;
+}
+
+.haha {
+    top: 15px;
+    bottom: 15px;
+    right: 0px;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 0 10px 10px 0;
+}
+
+.hehe {
+    top: 15px;
+    bottom: 15px;
+    left: 0px;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+}
+
+.scrollable {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding: 50px;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.list-group-item {
+    background-color: #2c869b;
+    color: white;
+    border-color: #2c869b;
+}
+.list-info{
+    list-style: none;
+}
+.list-info li{
+    padding: 5px;
+    position: relative;
+    display: block;
+    vertical-align: top;
+    width: auto;
+    font-size: 16px;
+    word-break: break-word;
+    text-align: right;
+}
+.list-info li b{
+    float: left;
+}
+
+p{
+    line-height: 1.8em;
+}
+.subtil{
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+}
+.line:after{
+    content: '';
+    position: absolute;
+    left: -50px;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 1px;
+    background: -moz-radial-gradient(left,ellipse cover,rgba(73, 73, 73.7) 0%,rgba(0,0,0,0) 70%);
+    background: -webkit-radial-gradient(left,ellipse cover,rgba(73, 73, 73, 0.7) 0%,rgba(0,0,0,0) 70%);
+    background: radial-gradient(ellipse at left,rgba(73, 73, 73, 0.7) 0%,rgba(0,0,0,0) 70%);
+}
+.line2:after{
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 1px;
+    background: -moz-radial-gradient(left,ellipse cover,rgba(73, 73, 73.7) 0%,rgba(0,0,0,0) 60%);
+    background: -webkit-radial-gradient(left,ellipse cover,rgba(73, 73, 73, 0.7) 0%,rgba(0,0,0,0) 60%);
+    background: radial-gradient(ellipse at left,rgba(73, 73, 73, 0.7) 0%,rgba(0,0,0,0) 60%);
+}
+::-webkit-scrollbar {
+    height: 5%;
+    width: 6px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2e2e2e67;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.226);
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0.1);
+}
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+ul.timeline > li > .name{
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: none;
+}
+
+ul.timeline > li > .name > .time{
+    float: right;
+    font-size: 14px;
+    padding: 1px 4px 1px 4px;
+    border: 2px solid #6d7274;
+    border-radius: 5px;
+}
+ul.timeline > li > .name > .active{
+    border: 2px solid #4098ab;
+}
+ul.timeline > li > .company{
+    margin: 0 0 11px;
+    font-size: 14px;
+    color: #999;
+    font-weight: 400;
+    text-transform: none;
+}
+.box-item {
+    position: relative;
+    overflow: hidden;
+    /* text-align:center */
+}
+
+.box-item .image {
+    position: relative
+}
+
+.box-item .image a {
+    display: block;
+    font-size: 0
+}
+
+.box-item .image a img {
+    position: relative;
+    width: 100%;
+    height: auto
+}
+
+.box-item .image .info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    transition: all .3s ease 0s;
+    -moz-transition: all .3s ease 0s;
+    -webkit-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s
+}
+.box-item .image .info .text {
+    bottom:0;
+    top: 100px;
+    color: #fff;
+    font-size: 14px;
+}
+.box-item .image .info:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(-45deg,rgba(16, 113, 204, 0.4) 0%,rgba(16, 113, 204,0.01) 100%);
+    background: -webkit-linear-gradient(-45deg,rgba(16, 113, 204,0.4) 0%,rgba(16, 113, 204,0.01) 100%);
+    background: linear-gradient(135deg,rgba(16, 113, 204,0.4) 0%,rgba(16, 113, 204,0.01) 100%);
+    transition: all .3s ease 0s;
+    -moz-transition: all .3s ease 0s;
+    -webkit-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s
+}
+
+.box-item .image .info .ion,.box-item .image .info .fab,.box-item .image .info .fas {
+    margin: -16px 0 0 -16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    line-height: 32px;
+    color: #fff;
+    transition: all .1s ease-in .4s;
+    -moz-transition: all .1s ease-in .4s;
+    -webkit-transition: all .1s ease-in .4s;
+    -o-transition: all .1s ease-in .4s
+}
+
+
+.box-item .desc {
+    padding: 5px 10px 0;
+    position: relative
+}
+
+.box-item .desc .name {
+    padding: 0 0 2px;
+    display: block;
+    font-size: 13px;
+    color: #171717;
+    font-weight: 500;
+    text-transform: uppercase
+}
+
+.box-item .desc .category {
+    margin: 0;
+    font-size: 11px;
+    color: #999;
+    font-weight: 300;
+    text-transform: uppercase
+}
+
+.box-item .date {
+    padding: 10px 0 0;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 11px;
+    line-height: 11px;
+    color: #171717;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: #fff
+}
+
+.box-item .date strong {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    color: #171717;
+    font-weight: 700
+}
+
+.box-item:hover .image .info {
+    opacity: 1
+}
+.box-item {
+    overflow: visible
+}
+
+.content.blog .row .col {
+    padding-bottom: 0
+}
+
+.box-item .image {
+    overflow: hidden;
+    z-index: 2
+}
+
+.box-item .image a img {
+    transition: all .6s ease 0s;
+    -moz-transition: all .6s ease 0s;
+    -webkit-transition: all .6s ease 0s;
+    -o-transition: all .6s ease 0s;
+    transform: scale(1);
+    -webkit-transform: scale(1)
+}
+
+.box-item:hover .image a img {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05)
+}
+.project-item{
+    padding-bottom: 20px;
+}
+/*===============FIX MODAL EMBED YT=============*/
+.modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+       -moz-transition: -moz-transform 0.3s ease-out;
+         -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  
+}
+/*===============FIX MODAL EMBED YT=============*/
