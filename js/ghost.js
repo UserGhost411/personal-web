@@ -9,14 +9,15 @@ var card_items = $('.content');
 var animation_in = container.data('animation-in');
 var animation_out = container.data('animation-out');
 $('.list-menu').on('click', 'a', function () {
+
     var width = $(window).width();
     var id = $(this).attr('href');
     var h = parseFloat($(id).offset().top);
     var card_item = $(id);
     var menu_items = $('.list-menu a');
     var menu_item = $(this).closest('a');
-    if ((width >= 1024)) { // tampilan dekstop
-        if (!menu_item.hasClass('active') & (width > 1023)) {
+    //if ((width >= 1024)) { // tampilan dekstop
+        if (!menu_item.hasClass('active')) {
             menu_items.removeClass('active');
             container.find(card_items).removeClass('animated ' + animation_in);
             if ($(container).hasClass('opened'))  container.find(card_items).addClass('animated ' + animation_out);
@@ -30,7 +31,7 @@ $('.list-menu').on('click', 'a', function () {
             $(card_item).addClass('active');
             
         }
-    }
+    //}
     return false;
 });
 $('.project-item-click').click(function(e) {  
